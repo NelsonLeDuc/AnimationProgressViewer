@@ -14,6 +14,10 @@
 		3967F8D119D94BCD0068AE87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3967F8D019D94BCD0068AE87 /* Images.xcassets */; };
 		3967F8D419D94BCD0068AE87 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3967F8D219D94BCD0068AE87 /* LaunchScreen.xib */; };
 		3967F8E019D94BCD0068AE87 /* AnimationProgressViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967F8DF19D94BCD0068AE87 /* AnimationProgressViewerTests.m */; };
+		3967F8EE19D94D830068AE87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967F8ED19D94D830068AE87 /* CoreGraphics.framework */; };
+		3967F8F019D94DAB0068AE87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967F8EF19D94DAB0068AE87 /* UIKit.framework */; };
+		3967F8F219D94DF60068AE87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967F8F119D94DF60068AE87 /* QuartzCore.framework */; };
+		3967F8F719D950BE0068AE87 /* WDCAnimationProgressViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967F8F619D950BE0068AE87 /* WDCAnimationProgressViewer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		3967F8D919D94BCD0068AE87 /* AnimationProgressViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationProgressViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3967F8DE19D94BCD0068AE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3967F8DF19D94BCD0068AE87 /* AnimationProgressViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationProgressViewerTests.m; sourceTree = "<group>"; };
+		3967F8ED19D94D830068AE87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3967F8EF19D94DAB0068AE87 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3967F8F119D94DF60068AE87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3967F8F319D94E680068AE87 /* AnimationProgressViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimationProgressViewer-Prefix.pch"; sourceTree = "<group>"; };
+		3967F8F519D950BE0068AE87 /* WDCAnimationProgressViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDCAnimationProgressViewer.h; path = "Progress Viewer/WDCAnimationProgressViewer.h"; sourceTree = "<group>"; };
+		3967F8F619D950BE0068AE87 /* WDCAnimationProgressViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDCAnimationProgressViewer.m; path = "Progress Viewer/WDCAnimationProgressViewer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3967F8F219D94DF60068AE87 /* QuartzCore.framework in Frameworks */,
+				3967F8F019D94DAB0068AE87 /* UIKit.framework in Frameworks */,
+				3967F8EE19D94D830068AE87 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3967F8C219D94BCD0068AE87 /* AnimationProgressViewer */,
+				3967F8F419D9508E0068AE87 /* Frameworks */,
 				3967F8DC19D94BCD0068AE87 /* AnimationProgressViewerTests */,
 				3967F8C119D94BCD0068AE87 /* Products */,
 			);
@@ -81,6 +95,7 @@
 		3967F8C219D94BCD0068AE87 /* AnimationProgressViewer */ = {
 			isa = PBXGroup;
 			children = (
+				3967F8E919D94BDB0068AE87 /* Progress Viewer */,
 				3967F8C719D94BCD0068AE87 /* AppDelegate.h */,
 				3967F8C819D94BCD0068AE87 /* AppDelegate.m */,
 				3967F8CA19D94BCD0068AE87 /* ViewController.h */,
@@ -96,6 +111,7 @@
 		3967F8C319D94BCD0068AE87 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3967F8F319D94E680068AE87 /* AnimationProgressViewer-Prefix.pch */,
 				3967F8C419D94BCD0068AE87 /* Info.plist */,
 				3967F8C519D94BCD0068AE87 /* main.m */,
 			);
@@ -117,6 +133,26 @@
 				3967F8DE19D94BCD0068AE87 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3967F8E919D94BDB0068AE87 /* Progress Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				3967F8F519D950BE0068AE87 /* WDCAnimationProgressViewer.h */,
+				3967F8F619D950BE0068AE87 /* WDCAnimationProgressViewer.m */,
+			);
+			name = "Progress Viewer";
+			sourceTree = "<group>";
+		};
+		3967F8F419D9508E0068AE87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3967F8F119D94DF60068AE87 /* QuartzCore.framework */,
+				3967F8EF19D94DAB0068AE87 /* UIKit.framework */,
+				3967F8ED19D94D830068AE87 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			path = AnimationProgressViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +257,7 @@
 			files = (
 				3967F8CC19D94BCD0068AE87 /* ViewController.m in Sources */,
 				3967F8C919D94BCD0068AE87 /* AppDelegate.m in Sources */,
+				3967F8F719D950BE0068AE87 /* WDCAnimationProgressViewer.m in Sources */,
 				3967F8C619D94BCD0068AE87 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AnimationProgressViewer/AnimationProgressViewer-Prefix.pch";
 				INFOPLIST_FILE = AnimationProgressViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "AnimationProgressViewer/AnimationProgressViewer-Prefix.pch";
 				INFOPLIST_FILE = AnimationProgressViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
