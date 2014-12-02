@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391CEC6C1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 391CEC6B1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.m */; };
 		3967F8C619D94BCD0068AE87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967F8C519D94BCD0068AE87 /* main.m */; };
 		3967F8C919D94BCD0068AE87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967F8C819D94BCD0068AE87 /* AppDelegate.m */; };
 		3967F8CC19D94BCD0068AE87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967F8CB19D94BCD0068AE87 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391CEC6A1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDCAnimationProgressDescriptor.h; path = "Progress Viewer/WDCAnimationProgressDescriptor.h"; sourceTree = "<group>"; };
+		391CEC6B1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDCAnimationProgressDescriptor.m; path = "Progress Viewer/WDCAnimationProgressDescriptor.m"; sourceTree = "<group>"; };
 		3967F8C019D94BCD0068AE87 /* AnimationProgressViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationProgressViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3967F8C419D94BCD0068AE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3967F8C519D94BCD0068AE87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 			children = (
 				3967F8F519D950BE0068AE87 /* WDCAnimationProgressViewer.h */,
 				3967F8F619D950BE0068AE87 /* WDCAnimationProgressViewer.m */,
+				391CEC6A1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.h */,
+				391CEC6B1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.m */,
 			);
 			name = "Progress Viewer";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				3967F8CC19D94BCD0068AE87 /* ViewController.m in Sources */,
 				3967F8C919D94BCD0068AE87 /* AppDelegate.m in Sources */,
 				3967F8F719D950BE0068AE87 /* WDCAnimationProgressViewer.m in Sources */,
+				391CEC6C1A2E780C006D94B9 /* WDCAnimationProgressDescriptor.m in Sources */,
 				3967F8C619D94BCD0068AE87 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +457,7 @@
 				3967F8E519D94BCD0068AE87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3967F8E619D94BCD0068AE87 /* Build configuration list for PBXNativeTarget "AnimationProgressViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +466,7 @@
 				3967F8E819D94BCD0068AE87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

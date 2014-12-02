@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^WDCProgressCallback)(NSDictionary *);
+
+@class WDCAnimationProgressDescriptor;
 @protocol WDCAnimationProgressViewerObserver;
 
 @interface WDCAnimationProgressViewer : NSObject
 
 + (void)addAnimationObserver:(id<WDCAnimationProgressViewerObserver>)observer forViews:(NSArray *)views;
 + (void)removeAnimationObserver:(id<WDCAnimationProgressViewerObserver>)observer;
+
++ (void)addAnimationDescriptor:(WDCAnimationProgressDescriptor *)descriptor withCallback:(WDCProgressCallback)callback;
 
 @end
 

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "WDCAnimationProgressViewer.h"
+#import "WDCAnimationProgressDescriptor.h"
+
+#define USE_DESCRIPTOR_INSTEAD 0
 
 @interface ViewController () <WDCAnimationProgressViewerObserver>
 
@@ -39,7 +42,27 @@
     bounceAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.animatedView.layer addAnimation:bounceAnimation forKey:@"bounce"];
     
+#if USE_DESCRIPTOR_INSTEAD == 1
+    WDCAnimationProgressDescriptor *descriptor = [WDCAnimationProgressDescriptor descriptorWithView:self.animatedView layerKeyPath:@"position"];
+    
+    [WDCAnimationProgressViewer addAnimationDescriptor:descriptor withCallback:^(NSDictionary *dict) {
+        CGPoint position = [dict[@"position"] CGPointValue];
+        
+        UIColor *backgroundColor = nil;
+        if (position.y > self.view.center.y)
+        {
+            backgroundColor = [UIColor blueColor];
+        }
+        else
+        {
+            backgroundColor = [UIColor redColor];
+        }
+        
+        self.animatedView.backgroundColor = backgroundColor;
+    }];
+#else
     [WDCAnimationProgressViewer addAnimationObserver:self forViews:@[self.animatedView]];
+#endif
 }
 
 #pragma mark - WDCAnimationProgressViewerObserver
@@ -50,10 +73,17 @@
         return;
     
     CALayer *animatedLayer = layers[0];
-    if (ABS(animatedLayer.position.y - self.view.center.y) < 1.0)
+    UIColor *backgroundColor = nil;
+    if (animatedLayer.position.y > self.view.center.y)
     {
-        self.animatedView.backgroundColor = ([self.animatedView.backgroundColor isEqual:[UIColor blueColor]]) ? [UIColor redColor] : [UIColor blueColor];
+        backgroundColor = [UIColor blueColor];
     }
+    else
+    {
+        backgroundColor = [UIColor redColor];
+    }
+    
+    self.animatedView.backgroundColor = backgroundColor;
 }
 
 @end
